@@ -1,10 +1,10 @@
-import { useLoaderData } from "react-router-dom";
 import Banner from "../../Component/Banner";
 import BookCards from "../../Component/BookCards";
+import useFetchData from "../../Utils/useFetchData";
 
 const Home = () => {
-  const data = useLoaderData();
-  console.log(data);
+  const { data } = useFetchData();
+
   return (
     <>
       <Banner></Banner>
