@@ -11,7 +11,7 @@ export const getBooks = (key) => {
 
 export const saveBook = (key, book) => {
   let books = getBooks(key);
-  const isExist = books.find((b) => b.bookId === book.bookId);
+  const isExist = books?.find((b) => b.bookId === book.bookId);
   console.log(isExist);
   console.log(book);
   if (isExist) {

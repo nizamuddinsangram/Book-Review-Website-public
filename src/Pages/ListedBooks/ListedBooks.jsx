@@ -3,10 +3,41 @@ import { Link, Outlet } from "react-router-dom";
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
+  // //sort
+  // const [books, setBooks] = useState([]);
+
+  // const [sortBy, setSortBy] = useState(null); // State to manage the selected sorting option
+  // useEffect(() => {
+  //   const key1 = "readBook";
+  //   const savedBooks = getBooks(key1);
+  //   setBooks(savedBooks);
+  // }, []);
+  // // Function to sort books based on the selected option
+
+  // const sortBooks = (books, sortBy) => {
+  //   if (sortBy === "rating") {
+  //     return [...books].sort((a, b) => b.rating - a.rating);
+  //   } else if (sortBy === "totalPages") {
+  //     return [...books].sort((a, b) => b.totalPages - a.totalPages);
+  //   } else if (sortBy === "yearOfPublishing") {
+  //     return [...books].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+  //   }
+  //   return books;
+  // };
+  // const handleSortChange = (event) => {
+  //   setSortBy(event.target.value); // Update the selected sorting option
+  // };
+  // const sortedBooks = sortBooks(books, sortBy);
+  //value={sortBy} onChange={handleSortChange}
   return (
     <div className="text-center">
       <p> Books</p>
-      <button className="btn bg-green-400">Sort By</button>
+      <select className="m-1 btn">
+        <option value="">Sort By</option>
+        <option value="rating">Rating</option>
+        <option value="totalPages">Number of Pages</option>
+        <option value="yearOfPublishing">Publisher Year</option>
+      </select>
       <div className="flex items-center overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap ">
         <Link
           to={``}

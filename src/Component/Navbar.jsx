@@ -68,10 +68,26 @@ const Navbar = () => {
           <NavLink
             to="/pages-read"
             className={({ isActive }) =>
-              isActive ? "bg-red-400  rounded-lg py-1 px-2" : ""
+              isActive ? "bg-red-400 mr-6 rounded-lg py-1 px-2" : "mr-6"
             }
           >
             Pages to Read
+          </NavLink>
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              isActive ? "bg-red-400 mr-6 rounded-lg py-1 px-2" : "mr-6"
+            }
+          >
+            Blog
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "bg-red-400  rounded-lg py-1 px-2" : ""
+            }
+          >
+            Contact
           </NavLink>
         </ul>
       </div>

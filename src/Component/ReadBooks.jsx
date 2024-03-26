@@ -9,6 +9,8 @@ const ReadBooks = () => {
     const savedBooks = getBooks(key1);
     setBooks(savedBooks);
   }, []);
+  //soter
+
   console.log(books);
   return (
     <>

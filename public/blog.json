@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "heading": "10 Tips for Better Time Management",
+    "date": "2024-03-25",
+    "image": "https://example.com/images/blog1.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet sapien eget nisi rhoncus tempor. Integer sagittis, metus eget feugiat consectetur, odio mi aliquet dolor, id bibendum quam lacus nec nisi."
+  },
+  {
+    "id": 2,
+    "heading": "The Importance of Regular Exercise",
+    "date": "2024-03-24",
+    "image": "https://example.com/images/blog2.jpg",
+    "description": "Praesent interdum blandit dolor, id ultricies mi accumsan eu. Proin sagittis magna ac accumsan sollicitudin. Suspendisse potenti. Nulla facilisi. Aenean bibendum sem nec libero convallis, sed tincidunt ligula viverra."
+  },
+  {
+    "id": 3,
+    "heading": "Healthy Eating Habits to Improve Your Life",
+    "date": "2024-03-23",
+    "image": "https://example.com/images/blog3.jpg",
+    "description": "Etiam auctor ligula a elit consectetur interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tristique id lorem vel ultricies. Proin ultricies nisl nec lectus fringilla scelerisque."
+  },
+  {
+    "id": 4,
+    "heading": "The Benefits of Meditation",
+    "date": "2024-03-22",
+    "image": "https://example.com/images/blog4.jpg",
+    "description": "Aliquam erat volutpat. Nunc interdum diam id purus tincidunt, id fermentum elit cursus. Ut vel tortor sem. Maecenas euismod, lacus a gravida congue, mi nulla volutpat turpis, sed rhoncus purus sem non ex."
+  },
+  {
+    "id": 5,
+    "heading": "Tips for Improving Mental Health",
+    "date": "2024-03-21",
+    "image": "https://example.com/images/blog5.jpg",
+    "description": "Vivamus vitae urna a est lacinia ultricies. Fusce tincidunt velit sed sapien congue, eu suscipit sapien volutpat. Nam volutpat vestibulum tortor, vitae dignissim nisl eleifend id. Duis nec ligula sapien."
+  },
+  {
+    "id": 6,
+    "heading": "How to Stay Motivated in Your Work",
+    "date": "2024-03-20",
+    "image": "https://example.com/images/blog6.jpg",
+    "description": "Integer euismod lorem vitae tellus accumsan, vel commodo nisi dapibus. In tincidunt vehicula justo, non malesuada libero tincidunt at. Morbi non aliquam magna. Duis et efficitur mi, sit amet lobortis ligula."
+  },
+  {
+    "id": 7,
+    "heading": "Travel Tips for a Stress-Free Vacation",
+    "date": "2024-03-19",
+    "image": "https://example.com/images/blog7.jpg",
+    "description": "Donec nec viverra sem. Quisque gravida odio eget ante pharetra rutrum. Aliquam erat volutpat. Integer auctor vehicula neque, eget cursus magna. Ut ac metus in odio viverra sollicitudin at vitae justo."
+  },
+  {
+    "id": 8,
+    "heading": "Effective Communication Strategies",
+    "date": "2024-03-18",
+    "image": "https://example.com/images/blog8.jpg",
+    "description": "Curabitur nec nunc pulvinar, bibendum lorem id, mollis elit. Suspendisse potenti. Nullam et est nulla. Curabitur hendrerit sapien eu urna convallis, eget ultricies odio posuere. Fusce euismod sit amet sem quis posuere."
+  },
+  {
+    "id": 9,
+    "heading": "The Power of Positive Thinking",
+    "date": "2024-03-17",
+    "image": "https://example.com/images/blog9.jpg",
+    "description": "Fusce scelerisque mi vitae tempus fermentum. Curabitur fringilla quam ac orci tincidunt, nec aliquam nunc sollicitudin. Proin ac est luctus, venenatis metus et, malesuada orci. Phasellus lacinia ligula ut velit tempor, non facilisis enim varius."
+  }
+]

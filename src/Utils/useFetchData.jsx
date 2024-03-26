@@ -10,6 +10,32 @@
 //     return null; // Or handle the error accordingly
 //   }
 // };
+// import { useEffect, useState } from "react";
+
+// const useFetchData = () => {
+//   const [data, setData] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       setLoading(true);
+//       const res = await fetch("/data.json");
+//       const data = await res.json();
+//       setData(data);
+//       setLoading(false);
+//     };
+//     fetchData();
+//   }, []);
+//   return { data, loading };
+// };
+
+// export default useFetchData;
+
+// const fetchData = () => {
+
+//   return ;
+// };
+
+// export default FetchData;
 import { useEffect, useState } from "react";
 
 const useFetchData = () => {
@@ -29,10 +55,3 @@ const useFetchData = () => {
 };
 
 export default useFetchData;
-
-// const fetchData = () => {
-
-//   return ;
-// };
-
-// export default FetchData;

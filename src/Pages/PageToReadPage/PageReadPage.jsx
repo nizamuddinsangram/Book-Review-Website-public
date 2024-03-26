@@ -40,7 +40,7 @@ const PageReadPage = () => {
       <div className="max-w-7xl mx-auto">
         <BarChart
           width={1200}
-          height={800}
+          height={600}
           data={books}
           margin={{
             top: 20,

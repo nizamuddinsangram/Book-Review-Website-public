@@ -6,6 +6,7 @@ import useFetchData from "../Utils/useFetchData";
 const BookDetails = () => {
   const [singleData, setSingleData] = useState({});
   const { cardId } = useParams();
+
   const { data } = useFetchData();
   useEffect(() => {
     if (data) {

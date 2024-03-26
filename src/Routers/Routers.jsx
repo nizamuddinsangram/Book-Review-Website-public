@@ -3,6 +3,9 @@ import BookDetails from "../Component/BookDetails";
 import ReadBooks from "../Component/ReadBooks";
 import Wishlist from "../Component/Wishlist";
 import MainLayout from "../Layout/MainLayout";
+import Blog from "../Pages/Blog/Blog";
+import Contact from "../Pages/Contact/Contact";
+import ErrorPage from "../Pages/Errorpage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import ListedBooks from "../Pages/ListedBooks/ListedBooks";
 import PageReadPage from "../Pages/PageToReadPage/PageReadPage";
@@ -11,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement: <div>opps error </div>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -25,6 +28,16 @@ const router = createBrowserRouter([
         path: "/pages-read",
         element: <PageReadPage />,
       },
+      {
+        path: "/blog",
+        element: <Blog />,
+        loader: () => fetch("/blog.json"),
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+
       {
         path: "/listed-book",
         element: <ListedBooks />,
