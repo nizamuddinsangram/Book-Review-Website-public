@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { saveBook } from "../Utils/localStorage";
 import useFetchData from "../Utils/useFetchData";
 
 const BookDetails = () => {
@@ -9,13 +10,19 @@ const BookDetails = () => {
   useEffect(() => {
     if (data) {
       const single = data.find((item) => item.bookId == parseFloat(cardId));
-
       setSingleData(single);
     }
   }, [data, cardId]);
-  console.log(singleData);
-  //   const { image, bookName, category, rating, author } = singleData;
-
+  //   console.log(singleData);
+  //localStorage
+  const handleReadBooks = () => {
+    const key1 = "readBook";
+    saveBook(key1, singleData);
+  };
+  const handleWIshlist = () => {
+    const key2 = "wishlist";
+    saveBook(key2, singleData);
+  };
   return (
     <div className="flex justify-between items-center p-4 border rounded-lg shadow-md">
       {/* Left Side (Image) */}
@@ -57,10 +64,16 @@ const BookDetails = () => {
         </div>
         {/* Buttons */}
         <div className="flex">
-          <button className="bg-blue-500 btn text-white px-4 py-2 rounded-md mr-2">
+          <button
+            onClick={handleReadBooks}
+            className="bg-blue-500 btn text-white px-4 py-2 rounded-md mr-2"
+          >
             Read
           </button>
-          <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">
+          <button
+            onClick={handleWIshlist}
+            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md"
+          >
             Wishlist
           </button>
         </div>

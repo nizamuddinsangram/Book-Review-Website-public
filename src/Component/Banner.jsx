@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../public/img7.avif";
 const Banner = () => {
   return (
@@ -9,9 +10,12 @@ const Banner = () => {
             Books to freshen <br />
             up your bookshelf
           </h2>
-          <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+          <Link
+            to="/listed-book"
+            className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600"
+          >
             View The List
-          </button>
+          </Link>
         </div>
         {/* Right Side (40%) */}
         <div className="w-2/5">
