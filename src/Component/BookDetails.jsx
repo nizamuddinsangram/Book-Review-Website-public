@@ -24,9 +24,9 @@ const BookDetails = () => {
     saveBook(key2, singleData);
   };
   return (
-    <div className="flex justify-between items-center p-4 border rounded-lg shadow-md">
+    <div className="sm:grid grid-cols-1  lg:flex lg:justify-between lg:items-center p-4 border rounded-lg shadow-md">
       {/* Left Side (Image) */}
-      <div className="w-1/2 pr-4">
+      <div className="w-full lg:w-1/2 pr-4">
         <img
           src={singleData?.image}
           alt="Book Image"
@@ -34,7 +34,7 @@ const BookDetails = () => {
         />
       </div>
       {/* Right Side (Details) */}
-      <div className="w-1/2 pl-4">
+      <div className="w-full lg:w-1/2 pl-4">
         {/* Title */}
         <h2 className="text-xl font-bold mb-2">Book Title</h2>
         {/* Seller Name */}
