@@ -5,6 +5,7 @@ import Wishlist from "../Component/Wishlist";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import ListedBooks from "../Pages/ListedBooks/ListedBooks";
+import PageReadPage from "../Pages/PageToReadPage/PageReadPage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/card/:cardId",
         element: <BookDetails />,
+      },
+      {
+        path: "/pages-read",
+        element: <PageReadPage />,
       },
       {
         path: "/listed-book",

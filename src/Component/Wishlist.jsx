@@ -12,7 +12,7 @@ const Wishlist = () => {
   return (
     <div>
       {wishlists?.map((wishlist) => (
-        <ListedBooksCard book={wishlist} />
+        <ListedBooksCard key={wishlist?.bookId} book={wishlist} />
       ))}
     </div>
   );
