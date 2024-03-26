@@ -1,49 +1,6 @@
+import { useEffect, useState } from "react";
 import { Bar, BarChart, CartesianGrid, Cell, XAxis, YAxis } from "recharts";
-
-const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+import { getBooks } from "../../Utils/localStorage";
 
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${
@@ -62,6 +19,13 @@ const TriangleBar = (props) => {
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 const PageReadPage = () => {
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    const key1 = "readBook";
+    const savedBooks = getBooks(key1);
+    setBooks(savedBooks || []);
+  }, []);
+  console.log(books);
   const colors = [
     "#8884d8",
     "#83a6ed",
@@ -76,7 +40,7 @@ const PageReadPage = () => {
     <BarChart
       width={1200}
       height={800}
-      data={data}
+      data={books}
       margin={{
         top: 20,
         right: 30,
@@ -88,12 +52,12 @@ const PageReadPage = () => {
       <XAxis dataKey="name" />
       <YAxis />
       <Bar
-        dataKey="uv"
+        dataKey="totalPages"
         fill="#8884d8"
         shape={<TriangleBar />}
         label={{ position: "top" }}
       >
-        {data.map((entry, index) => (
+        {books?.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
         ))}
       </Bar>
