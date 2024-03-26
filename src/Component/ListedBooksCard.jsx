@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const ListedBooksCard = ({ book }) => {
   return (
-    <div className="border rounded-lg shadow-md flex p-4">
+    <div className="border rounded-lg shadow-md grid grid-cols-1 lg:flex p-4">
       {/* Left Side (Image) */}
-      <div className="w-1/5">
+      <div className="w-full lg:w-1/5">
         <img src={book?.image} alt="Book Cover" className="w-full h-auto" />
       </div>
       {/* Right Side (Details) */}
-      <div className="w-4/5 pl-4">
+      <div className="w-full lg:w-4/5 pl-4">
         {/* Title */}
         <h2 className="text-xl font-bold mb-2">{book?.bookName}</h2>
         {/* Author Name */}

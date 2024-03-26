@@ -25,7 +25,6 @@ const PageReadPage = () => {
     const savedBooks = getBooks(key1);
     setBooks(savedBooks || []);
   }, []);
-  console.log(books);
   const colors = [
     "#8884d8",
     "#83a6ed",
@@ -37,31 +36,35 @@ const PageReadPage = () => {
   ];
 
   return (
-    <BarChart
-      width={1200}
-      height={800}
-      data={books}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar
-        dataKey="totalPages"
-        fill="#8884d8"
-        shape={<TriangleBar />}
-        label={{ position: "top" }}
-      >
-        {books?.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+    <div className="w-full h-screen flex justify-center items-center">
+      <div className="max-w-7xl mx-auto">
+        <BarChart
+          width={1200}
+          height={800}
+          data={books}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Bar
+            dataKey="totalPages"
+            fill="#8884d8"
+            shape={<TriangleBar />}
+            label={{ position: "top" }}
+          >
+            {books?.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+            ))}
+          </Bar>
+        </BarChart>
+      </div>
+    </div>
   );
 };
 
