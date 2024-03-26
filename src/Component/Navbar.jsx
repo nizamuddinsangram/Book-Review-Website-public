@@ -27,62 +27,57 @@ const Navbar = () => {
           >
             <NavLink
               to="/"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
+              className={({ isActive }) => (isActive ? "bg-red-400" : "")}
             >
               Home
             </NavLink>
             <NavLink
               to="/listed-book"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
+              className={({ isActive }) => (isActive ? "bg-red-400" : "")}
             >
               Listed Books
             </NavLink>
             <NavLink
-              to="/Pages-read"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
+              to="/pages-read"
+              className={({ isActive }) => (isActive ? "bg-red-400" : "")}
             >
               Pages to Read
             </NavLink>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Book vibe</a>
+        <a className="btn btn-ghost text-3xl font-black">Book vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu  menu-horizontal px-1 text-xl  text-gray-500">
           <NavLink
             to="/"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
+            className={({ isActive }) =>
+              isActive ? "bg-red-400  rounded-lg py-1 px-2" : ""
             }
           >
             Home
           </NavLink>
           <NavLink
             to="/listed-book"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
+            className={({ isActive }) =>
+              isActive ? "bg-red-400 mx-12 rounded-lg py-1 px-2" : "mx-12"
             }
           >
             Listed Books
           </NavLink>
           <NavLink
-            to="/Pages-read"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
+            to="/pages-read"
+            className={({ isActive }) =>
+              isActive ? "bg-red-400  rounded-lg py-1 px-2" : ""
             }
           >
             Pages to Read
           </NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end  ">
+        <a className="btn text-white btn-secondary">Sign In</a>
+        <a className="btn ml-6 text-white  btn-accent">Sign Up</a>
       </div>
     </div>
   );
