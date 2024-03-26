@@ -11,7 +11,6 @@ const ReadBooks = () => {
   }, []);
   //soter
 
-  console.log(books);
   return (
     <>
       {books?.map((book) => (

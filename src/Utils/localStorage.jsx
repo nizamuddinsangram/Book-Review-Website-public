@@ -1,5 +1,3 @@
-import toast from "react-hot-toast";
-
 export const getBooks = (key) => {
   let books = [];
   const storedBooks = localStorage.getItem(key);
@@ -15,9 +13,8 @@ export const saveBook = (key, book) => {
   console.log(isExist);
   console.log(book);
   if (isExist) {
-    return toast.error("Book already exists");
+    return;
   }
   books.push(book);
   localStorage.setItem(key, JSON.stringify(books));
-  toast.success("Blog Bookmarked Successfully!");
 };

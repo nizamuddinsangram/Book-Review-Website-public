@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import { saveBook } from "../Utils/localStorage";
 import useFetchData from "../Utils/useFetchData";
 
 const BookDetails = () => {
+  const [alreadyAddedToRead, setAlreadyAddedToRead] = useState(false);
+  const [alreadyAddedToWishlist, setAlreadyAddedToWishlist] = useState(false);
   const [singleData, setSingleData] = useState({});
   const { cardId } = useParams();
 
@@ -18,11 +21,29 @@ const BookDetails = () => {
   //localStorage
   const handleReadBooks = () => {
     const key1 = "readBook";
-    saveBook(key1, singleData);
+    if (!alreadyAddedToRead) {
+      saveBook(key1, singleData);
+      setAlreadyAddedToRead(true);
+      toast.success("Blog Bookmarked Successfully!");
+    } else {
+      toast.error("Book already exists");
+    }
+    // saveBook(key1, singleData);
   };
   const handleWIshlist = () => {
     const key2 = "wishlist";
-    saveBook(key2, singleData);
+    if (alreadyAddedToRead) {
+      toast.error("Book already added to Read list, cannot add to Wishlist");
+    } else if (!alreadyAddedToWishlist) {
+      saveBook(key2, singleData);
+      setAlreadyAddedToWishlist(true);
+      toast.success("Book added to Wishlist");
+    } else {
+      toast.error("Book already added to Wishlist");
+    }
+    //
+    // const key2 = "wishlist";
+    // saveBook(key2, singleData);
   };
   return (
     <div>
