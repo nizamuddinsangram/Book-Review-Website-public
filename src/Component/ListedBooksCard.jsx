@@ -11,9 +11,11 @@ const ListedBooksCard = ({ book }) => {
       </div>
 
       <div className="w-full lg:w-4/5 pl-4">
-        <h2 className="text-2xl font-bold mb-2 text-start">{book?.bookName}</h2>
+        <h2 className="text-xl lg:text-2xl font-bold mb-2 text-start">
+          {book?.bookName}
+        </h2>
 
-        <p className="text-gray-500 mb-2 text-start text-lg font-medium ">
+        <p className="text-gray-500 mb-2 text-start text-sm lg:text-lg font-medium ">
           By: {book?.author}
         </p>
 
@@ -26,7 +28,7 @@ const ListedBooksCard = ({ book }) => {
               {tag}
             </span>
           ))}
-          <div className="flex items-center justify-center text-xl">
+          <div className=" flex items-center justify-center text-lg lg:text-xl">
             <FaMapMarkerAlt className="mx-2" />
             <p>year of publisher: {book?.yearOfPublishing}</p>
           </div>
