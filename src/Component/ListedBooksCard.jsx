@@ -1,23 +1,23 @@
 import React from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoWomanSharp } from "react-icons/io5";
+import { RiPagesLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-
 const ListedBooksCard = ({ book }) => {
   return (
     <div className="border rounded-lg shadow-md grid grid-cols-1 lg:flex p-4">
-      {/* Left Side (Image) */}
       <div className="w-full lg:w-1/5">
         <img src={book?.image} alt="Book Cover" className="w-full h-52" />
       </div>
-      {/* Right Side (Details) */}
+
       <div className="w-full lg:w-4/5 pl-4">
-        {/* Title */}
         <h2 className="text-2xl font-bold mb-2 text-start">{book?.bookName}</h2>
-        {/* Author Name */}
+
         <p className="text-gray-500 mb-2 text-start text-lg font-medium ">
           By: {book?.author}
         </p>
-        {/* Tags */}
-        <div className="flex flex-wrap mb-2">
+
+        <div className="flex flex-wrap mb-2 items-center ">
           {book?.tags?.map((tag, index) => (
             <span
               key={index}
@@ -26,18 +26,26 @@ const ListedBooksCard = ({ book }) => {
               {tag}
             </span>
           ))}
-          <p>year of publisher: {book?.yearOfPublishing}</p>
+          <div className="flex items-center justify-center text-xl">
+            <FaMapMarkerAlt className="mx-2" />
+            <p>year of publisher: {book?.yearOfPublishing}</p>
+          </div>
         </div>
-        {/* Horizontal Line */}
+
         <hr className="my-2" />
-        {/* Publisher and Pages */}
+
         <div className="flex mb-2">
-          <p className="text-gray-600 mr-4">Publisher: {book?.publisher}</p>
-          <p className="text-gray-600">Pages: {book?.totalPages}</p>
+          <div className="flex items-center ">
+            <IoWomanSharp className="mx-1" />
+            <p className="text-gray-600 mr-4">Publisher: {book?.publisher}</p>
+          </div>
+          <div className="flex items-center ">
+            <RiPagesLine className="mx-1" />
+            <p className="text-gray-600">Pages: {book?.totalPages}</p>
+          </div>
         </div>
-        {/* Category, Rating, and View Details Button */}
+
         <div className="flex items-center justify-between">
-          {/* Category and Rating */}
           <div className="flex items-center justify-center">
             <p className="text-blue-500 btn bg-blue-200 mr-4">
               Category: {book?.category}
@@ -52,7 +60,6 @@ const ListedBooksCard = ({ book }) => {
               View Details
             </Link>
           </div>
-          {/* View Details Button */}
         </div>
       </div>
     </div>

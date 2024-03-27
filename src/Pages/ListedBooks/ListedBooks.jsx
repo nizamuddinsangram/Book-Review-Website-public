@@ -31,8 +31,11 @@ const ListedBooks = () => {
   //value={sortBy} onChange={handleSortChange}
   return (
     <div className="text-center">
-      <p> Books</p>
-      <select className="m-1 btn">
+      <div className="bg-gray-300 py-10 mb-4">
+        {" "}
+        <p className="text-4xl font-black">Books</p>
+      </div>
+      <select className="m-1 btn text-white bg-green-500 text-lg">
         <option value="">Sort By</option>
         <option value="rating">Rating</option>
         <option value="totalPages">Number of Pages</option>

@@ -1,3 +1,4 @@
+import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const BookCards = ({ item }) => {
@@ -25,7 +26,10 @@ const BookCards = ({ item }) => {
             <hr className=" my-2" />
             <div className="flex justify-between items-center">
               <p className="text-lg font-semibold text-gray-500">{category}</p>
-              <p className="text-lg font-semibold text-gray-500">{rating}</p>
+              <div className="flex items-center  ">
+                <p className="text-lg font-semibold text-gray-500">{rating}</p>
+                <CiStar className="mx-2" />
+              </div>
             </div>
           </div>
         </div>
